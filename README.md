@@ -1,38 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# School Animation Techniques Project
 
-## Getting Started
+This project demonstrates several main animation techniques, designed as an assignment for a school course on web animations. The goal is to showcase different ways of enriching the user interface with animations, making web interactions more dynamic and engaging.
 
-First, run the development server:
+## Animation Techniques
+
+Here's a brief overview of the animation techniques included in this project:
+
+1. **Mouse Position Animation:**
+   - Items on the page follow the mouse position, creating a fluid and interactive user experience that reacts to the user's movements.
+
+2. **Magnetically Snapping Items:**
+   - Elements on the page snap towards the mouse position when hovered, emulating a magnetic effect that attracts the cursor, adding a playful and tactile quality to the user interface.
+
+3. **Page Transitions - Fade In/Out:**
+   - Smooth fading transitions between pages provide a seamless navigation experience, reducing the cognitive load on users when content changes on the page.
+
+4. **Hover Animation for Sidebar Toggle:**
+   - The sidebar toggle features an animation that loops as the hover state, providing immediate visual feedback to the user and enhancing the usability of the navigation.
+
+5. **Modal with Staggered Animations:**
+   - The modal window displays its content with staggered animations, creating a sequence that adds depth to the presentation and keeps the user engaged with the unfolding content.
+
+## Installation
+
+To get started with this project, clone the repository to your local machine:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+git clone https://github.com/your-username/school-animation-project.git
