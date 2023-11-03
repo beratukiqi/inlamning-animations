@@ -1,0 +1,107 @@
+@keyframes hover-move {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+.category-sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+  padding: 2rem 1rem 2rem 1rem;
+  box-shadow: $box-shadow--main;
+  position: sticky;
+  top: 0rem;
+  padding-top: 7rem;
+  height: 100vh;
+  z-index: 9999;
+
+  .toggle {
+    cursor: pointer;
+    justify-self: flex-end;
+    align-self: flex-end;
+    width: 2.2rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+      animation: hover-move 1s ease-in-out infinite;
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      path {
+        fill: $color-blue;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.3rem;
+
+    li {
+      display: flex;
+
+      p {
+        font-size: $p-size--regular;
+        font-weight: $font-weight--bold;
+        color: $color-blue;
+      }
+
+      a {
+        background-color: $color-white;
+        border-radius: 2rem;
+        height: 2rem;
+        width: 100%;
+        min-width: 3rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        padding: 1.2rem 1rem 1.2rem 1rem;
+        gap: 1.2rem;
+
+        &.active {
+          background-color: $color-blue;
+
+          &:hover {
+            background-color: $color-blue;
+            cursor: default;
+          }
+
+          p {
+            color: $color-white;
+          }
+
+          path {
+            fill: $color-white;
+          }
+        }
+
+        div {
+          display: flex;
+
+          svg {
+            width: 1rem;
+            min-width: 1rem;
+            height: 1rem;
+            min-height: 1rem;
+            padding: 0;
+
+            path {
+              fill: $color-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}

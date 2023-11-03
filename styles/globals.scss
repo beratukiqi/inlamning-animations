@@ -1,0 +1,207 @@
+@import "variables";
+@import "sidebar";
+@import "attractions";
+@import "modal";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sofia-pro, sans-serif;
+  font-size: 16px;
+  font-weight: $font-weight--regular;
+}
+
+button {
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight--bold;
+  line-height: $line-height--headers;
+  color: $color-header;
+}
+
+h1 {
+  font-size: $h1-size;
+}
+
+h2 {
+  font-size: $h2-size;
+}
+
+h3 {
+  font-size: $h3-size;
+}
+
+p {
+  line-height: $line-height--paragraphs;
+  color: $color-paragraph;
+  font-size: $p-size--regular;
+  font-weight: $font-weight--regular;
+}
+
+a {
+  color: $color-paragraph;
+  text-decoration: none;
+}
+
+// Button styling with "mask" slideIn effect
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  background-color: $color-blue;
+  color: $color-white;
+  cursor: pointer;
+  margin-top: auto;
+  overflow: hidden;
+
+  // The "mask"
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: $color-blue--hover;
+    transition: width 0.4s ease;
+    border-radius: inherit;
+    z-index: 1;
+  }
+
+  .button-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+}
+
+// Cursor that follows the mouse
+.cursor {
+  background-color: $color-blue;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+
+  &.small {
+    height: 15px;
+    width: 15px;
+  }
+
+  &.smallest {
+    height: 8px;
+    width: 8px;
+  }
+}
+
+// Button that reacts to mouse hover
+.outer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+
+  .wrapper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+
+    .inner {
+      position: relative;
+      border: 1px solid $color-blue;
+      border-radius: 100%;
+      width: 100px;
+      height: 100px;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: auto;
+
+      .inner-label {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        z-index: 99;
+      }
+    }
+  }
+}
+
+.hero-small {
+  height: 250px;
+  padding-bottom: 3rem;
+
+  article {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: auto;
+    height: 100%;
+    padding: 0 3rem;
+
+    > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+
+      .category-hero-icon {
+        svg {
+          width: 98px;
+          height: 98px;
+          margin: auto;
+          path {
+            fill: $color-blue;
+          }
+        }
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 0;
+
+        p {
+          max-width: 700px;
+          font-weight: $font-weight--light;
+          font-size: $p-size--large;
+          @media (max-width: 900px) {
+            font-size: $p-size--regular;
+          }
+        }
+      }
+    }
+  }
+}
